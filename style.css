@@ -42,3 +42,13 @@ body{
 .cambioColore{
     background-color: white;
 }
+
+.cambioColoreRosso{
+    background-color: red;
+}
+
+.fine{
+    background-color: white;
+    width: 250px;
+    height: 50px;
+}

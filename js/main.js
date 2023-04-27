@@ -1,5 +1,5 @@
 let btn = document.getElementById("bottone");
-let numero = ["1", "2"];
+let bombe = [];
 
 
 btn.addEventListener("click", function(){
@@ -8,7 +8,7 @@ btn.addEventListener("click", function(){
 
     creaDivQuadratino();
 
-   
+    creaNumeroCasuale()
 })
 
 //funzione per creare div contenitore.
@@ -30,19 +30,42 @@ function creaDivQuadratino(){
         NuovoQadratino.innerHTML = i;
 
         NuovoQadratino.addEventListener("click", function(){
-            this.classList.toggle("cambioColore");
+
+            for (let c = 0; c < bombe.length; c++) {
+                console.log(bombe[c]);
+                let bomba = bombe[c];
+                
+                if ( i == bomba){
+                    this.classList.add("cambioColoreRosso");
+                    finePartita();
+    
+                } else {
+                    this.classList.add("cambioColore");
+                }
+            }
             console.log("hai selezionato il n:", i);
         })
     }
 }
 
 
-var numeroCasuale = Math.floor(Math.random()*100);
+
 function creaNumeroCasuale(){
-    for (let i = 0; i < 16; i++) {
-        numero.push(numeroCasuale);
+    for (let i = 1; i <= 16; i++) {
+        var numeroCasuale = Math.floor(Math.random()*100);
+        bombe.push(numeroCasuale);
+        
     }
+    console.log(bombe)
+}
+
+function finePartita(){
+    nuovoMess = document.createElement("div");
+    nuovoMess.className ="fine";
+    nuovoMess.innerHTML = "HAI PERSO!"
+    document.querySelector("main").appendChild(nuovoMess);
 
 }
 
-console.log(numero);
+
+
