@@ -1,5 +1,5 @@
 let btn = document.getElementById("bottone");
-let numero = [];
+let numero = ["1", "2"];
 
 
 btn.addEventListener("click", function(){
