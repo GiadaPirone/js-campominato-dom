@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: rgb(161, 67, 204);
+    font-family: sans-serif;
+}
+
+.container{
+    background-color: bisque;
+    width: 900px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.griglia{
+    background-color: rgb(235, 235, 129);
+    margin: 0px auto;
+    width: 900px;
+    min-height: 900px;
+
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.quadratino{
+    width: calc(100% / 10 );
+    height: 90px;
+    background-color: rgb(235, 235, 129);
+    border: 2px solid rgb(161, 67, 204);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cambioColore{
+    background-color: white;
+}
